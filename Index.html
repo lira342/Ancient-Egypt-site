@@ -1,0 +1,1265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ancient-egypt-site</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- NAVIGATION HEADER -->
+    <header id="main-nav">
+      <div class="header-container">
+        <!-- Logo -->
+        <a href="#hero" class="logo-link" id="logo-link">
+          <div class="logo-icon-box">
+            <svg
+              class="compass-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <polygon
+                points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"
+              ></polygon>
+            </svg>
+          </div>
+          <span class="logo-text"></span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="desktop-nav">
+          <a href="#hero">Discover</a>
+          <a href="#mythology">Mythology</a>
+          <a href="#throne-room-1">Throne Room I</a>
+          <a href="#throne-room-2">Throne Room II</a>
+          <a href="#posters">Posters</a>
+          <a href="#featured">Featured Book</a>
+          <a href="#bookstore">Characters</a>
+        </nav>
+
+        <!-- Action Controls -->
+        <div class="action-controls">
+          <button
+            id="cart-trigger-button"
+            class="cart-trigger"
+            aria-label="Open Cart"
+          >
+            <svg
+              class="bag-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+              ></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span id="cart-count-badge" class="cart-count">0</span>
+          </button>
+
+          <button
+            id="mobile-menu-toggle"
+            class="mobile-toggle"
+            aria-label="Toggle Menu"
+          >
+            <svg
+              class="menu-icon-svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Drawer Nav -->
+      <div id="mobile-nav-drawer" class="mobile-nav-drawer">
+        <div class="mobile-drawer-content">
+          <a href="#hero" class="mobile-nav-link">Discover</a>
+          <a href="#mythology" class="mobile-nav-link">Mythology</a>
+          <a href="#throne-room-1" class="mobile-nav-link">Throne Room I</a>
+          <a href="#throne-room-2" class="mobile-nav-link">Throne Room II</a>
+          <a href="#posters" class="mobile-nav-link">Posters</a>
+          <a href="#featured" class="mobile-nav-link">Featured Book</a>
+          <a href="#bookstore" class="mobile-nav-link">Characters</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT SECTIONS -->
+    <main>
+      <!-- HERO SECTION -->
+      <section id="hero" class="hero-section">
+        <!-- Decorative Hieroglyphics Background -->
+        <div class="hieroglyphs-bg">
+          <div>𓀀</div>
+          <div>𓁐</div>
+          <div>𓃠</div>
+          <div>𓅃</div>
+          <div>𓆗</div>
+          <div>𓎛</div>
+          <div>𓏏</div>
+          <div>𓐍</div>
+          <div>𓊹</div>
+          <div>𓍹</div>
+          <div>𓎯</div>
+          <div>𓆄</div>
+          <div>𓁩</div>
+          <div>𓃲</div>
+          <div>𓅊</div>
+          <div>𓆣</div>
+          <div>𓉔</div>
+          <div>𓊽</div>
+        </div>
+        <div class="ambient-glow"></div>
+
+        <div class="container hero-container">
+          <div class="hero-grid">
+            <!-- Text column -->
+            <div class="hero-text">
+              <div class="title-accent">
+                <span class="accent-line"></span>
+                <span class="accent-text">Eternal Dynasties</span>
+              </div>
+              <h1 class="hero-title">DISCOVER THE MYSTERIES <br />OF EGYPT</h1>
+              <p class="hero-subtitle">
+                You’ll Never See Egypt The Same Way Again...
+              </p>
+              <p class="hero-description">
+                Unpack the wonders of ancient Egypt with our expansive
+                encyclopedias and curated artisan prints. Get an immersive look
+                at ancient tombs, mythological realms, and the majestic items
+                that shaped history.
+              </p>
+              <div class="hero-buttons">
+                <button id="hero-cta-learn-more" class="btn btn-primary">
+                  LEARN MORE
+                </button>
+                <a
+                  href="#bookstore"
+                  class="btn btn-outline"
+                  id="hero-cta-catalog"
+                  >VIEW CHARACTERS</a
+                >
+              </div>
+            </div>
+
+            <!-- Collage column -->
+            <div class="hero-media">
+              <div class="collage-frame">
+                <img
+                  src="assets/Ramesis.png"
+                  alt="Mysteries of Egypt: Pyramids and Pharaoh"
+                  class="collage-image"
+                />
+                <div class="collage-overlay"></div>
+                <div class="corner-accent top-left"></div>
+                <div class="corner-accent top-right"></div>
+                <div class="corner-accent bottom-left"></div>
+                <div class="corner-accent bottom-right"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Triptych Arches Section -->
+          <div class="triptych-container">
+            <div class="triptych-grid">
+              <!-- Left Arch -->
+              <div class="triptych-arch-wrapper group-arch">
+                <div class="arch-frame side-arch">
+                  <img
+                    src="assets/sculpture.jpg"
+                    alt="Sacred Crown bust"
+                    class="arch-image grayscale"
+                  />
+                  <div class="arch-overlay"></div>
+                </div>
+                <span class="arch-label">Sacred Crown</span>
+              </div>
+
+              <!-- Center Arch -->
+              <div
+                class="triptych-arch-wrapper group-arch center-arch-translate"
+              >
+                <div class="arch-frame center-arch">
+                  <img
+                    src="assets/sculpture.jpg"
+                    alt="Royal Nefertiti bust"
+                    class="arch-image"
+                  />
+                  <div class="arch-overlay active-overlay"></div>
+                </div>
+                <span class="arch-label center-label">Royal Nefertiti</span>
+              </div>
+
+              <!-- Right Arch -->
+              <div class="triptych-arch-wrapper group-arch">
+                <div class="arch-frame side-arch flipped-image">
+                  <img
+                    src="assets/sculpture.jpg"
+                    alt="Divine Grace bust"
+                    class="arch-image grayscale"
+                  />
+                  <div class="arch-overlay"></div>
+                </div>
+                <span class="arch-label">Divine Grace</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+          <button
+            id="scroll-down-button"
+            class="scroll-btn"
+            aria-label="Scroll to next section"
+          >
+            <span class="scroll-text">SCROLL TO ASCEND</span>
+            <svg
+              class="bounce-arrow"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="7 13 12 18 17 13"></polyline>
+              <polyline points="7 6 12 11 17 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- MYTHOLOGY SECTION -->
+      <section id="mythology" class="mythology-section">
+        <div class="side-border left-border"></div>
+        <div class="side-border right-border"></div>
+        <div class="circle-decoration circle-left"></div>
+        <div class="circle-decoration circle-right"></div>
+
+        <div class="container">
+          <div class="mythology-grid">
+            <!-- Text -->
+            <div class="mythology-text">
+              <div class="title-accent font-brown">
+                <svg
+                  class="sparkle-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707.707M12 5a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"
+                  ></path>
+                </svg>
+                <span class="accent-text">Divine Sovereignty</span>
+              </div>
+              <h2 class="mythology-title">
+                Explore the Mythology <br class="hidden-sm" />
+                of Ancient Egypt
+              </h2>
+              <p class="mythology-gold-subtitle">
+                Understand the nature of the throne...
+              </p>
+              <div class="section-divider"></div>
+              <p class="mythology-description">
+                Get a deeper look into the powers that be that shaped the
+                Egyptian empire. From the primordial waters of Nun to the
+                ultimate cosmic battles between Osiris, Isis, and Seth. The
+                pharaoh was not just a king, but a living god—the earthly
+                embodiment of Horus, keeper of cosmic balance (Ma’at).
+              </p>
+              <button id="mythology-cta-learn-more" class="btn btn-brown">
+                <span>LEARN MORE</span>
+                <svg
+                  class="arrow-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Image -->
+            <div class="mythology-media">
+              <div class="throne-frame-box">
+                <div class="outer-gold-border"></div>
+                <div class="throne-ambient"></div>
+                <div class="throne-wrapper group">
+                  <img
+                    src="assets/images/egyptian_royal_throne_1782238860373.jpg"
+                    alt="Ornate Egyptian Golden Throne with Royal Blue Velvet"
+                    class="throne-image"
+                  />
+                  <div class="throne-caption">
+                    <h4 class="caption-title">The Thrones</h4>
+                    <p class="caption-text">
+                      Gold leaf, royal blue velvet, and master wood carvings
+                    </p>
+                  </div>
+                </div>
+                <div class="corner-seal seal-tl">☀️</div>
+                <div class="corner-seal seal-tr">☀️</div>
+                <div class="corner-seal seal-bl">☀️</div>
+                <div class="corner-seal seal-br">☀️</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- THRONE ROOM II SECTION -->
+      <section id="throne-room-1" class="throne-room-section">
+        <div class="container">
+          <!-- Heading -->
+          <div class="section-header text-center">
+            <div class="title-accent center-accent text-gold">
+              
+            </div>
+            <h2 class="section-title text-gold">Throne Room II</h2>
+            <p class="section-subtitle"></p>
+            <div class="header-line"></div>
+          </div>
+
+          <div class="throne-room-grid">
+            <!-- Viewport -->
+            <div class="viewport-column">
+              <div class="interactive-viewport">
+                <img
+                  src="assets/Screenshot 2026-06-24 163204.png"
+                  alt="Ancient Egyptian Temple Throne Room Drawing"
+                  class="viewport-image"
+                />
+                <!-- Watermark hint -->
+                <div class="viewport-hint">
+                  <svg
+                    class="hint-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    
+                   
+                    
+                  </svg>
+                  
+                </div>
+              </div>
+            </div>
+
+            <!-- Explanation Panel -->
+            <div class="panel-column">
+              <div id="relic-panel-1" class="relic-panel default-state">
+                <h3 class="panel-title">Chamber of Divine Order</h3>
+                <div class="panel-line"></div>
+                <p class="panel-desc">
+                  This illustration recreates Throne Room II, modeled after the
+                  Great Hypostyle Halls of the New Kingdom. Here, the pharaoh
+                  administered laws under the watch of Anubis and the protective
+                  sun disk of Horus (Khepri).
+                </p>
+                <div class="panel-alert">
+                  <svg
+                    class="alert-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                  </svg>
+                  <p class="alert-text">
+                    Select any illuminated eye icon on the left viewport to read
+                    about the sacred properties and significance of the temple
+                    carvings.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- THRONE ROOM III SECTION -->
+      <section id="throne-room-2" class="throne-room-section border-top-glow">
+        <div class="container">
+          <!-- Heading -->
+          <div class="section-header text-center">
+            <div class="title-accent center-accent text-gold">
+             
+            </div>
+            <h2 class="section-title text-gold">Throne Room III</h2>
+            <p class="section-subtitle"></p>
+            <div class="header-line"></div>
+          </div>
+
+          <div class="throne-room-grid">
+            <!-- Explanation Panel -->
+            <div class="panel-column mobile-order-2">
+              <div id="relic-panel-2" class="relic-panel default-state">
+                <h3 class="panel-title">The Pharaonic Throne of Ra</h3>
+                <div class="panel-line"></div>
+                <p class="panel-desc">
+                  Throne Room III represents the absolute spiritual center of
+                  Upper Egypt-the private solar sanctuary where the pharaoh
+                  communed directly with the priesthood of Heliopolis.
+                </p>
+                <div class="panel-alert">
+                  <svg
+                    class="alert-icon text-gold"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polygon points="12 2 2 22 22 22"></polygon>
+                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                  </svg>
+                  <p class="alert-text">
+                    Tap the gold eye nodules inside the dark sandstone sanctum
+                    on the right to read the rituals inscribed on Giza rock.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Viewport -->
+            <div class="viewport-column mobile-order-1">
+              <div class="interactive-viewport">
+                <img
+                  src="/assets/Screenshot 2026-06-24 163836.png"
+                  alt="Immersive Ancient Temple Inner Chamber Walls"
+                  class="viewport-image dark-opacity"
+                />
+                <div class="torch-ambient-gradient"></div>
+                <div class="center-glow-gradient"></div>
+
+                
+                <!-- In-view active label -->
+                >
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- POSTERS GALLERY SECTION -->
+      <section id="posters" class="posters-section">
+    <h2 class="section-title">The Posters</h2>
+
+    <div class="card-grid">
+        <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400" alt="Character 1">
+        </div>
+        <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400" alt="Character 2">
+        </div>
+    </div>
+</section>
+
+      <!-- FEATURED BOOK SECTION -->
+      <section id="featured" class="featured-book-section">
+        <div class="featured-ambient-glow"></div>
+
+        <div class="container">
+          <!-- Heading -->
+          <div class="section-header text-center">
+            <div class="title-accent center-accent text-gold">
+              
+             
+            
+            </div>
+            <h2 class="section-title text-gold"></h2>
+            
+          </div>
+
+          <div class="featured-grid">
+            <!-- Book cover artwork -->
+            <div class="featured-media">
+              <div class="book-backing-box"></div>
+              <div class="book-cover-frame">
+                <img
+                  src="assets/Background Removed Amazon_com_ Ancient Egypt Echoes_ Chronicles of the Eternal Nile Part 6 eBook _ Ahmed, Atef_ Kindle Store.png"
+                  alt="The Egyptian Book of the Dead"
+                  class="book-cover-img"
+                />
+                <div class="book-cover-shadow"></div>
+                <div class="book-corner gold-tl"></div>
+                <div class="book-corner gold-tr"></div>
+                <div class="book-corner gold-bl"></div>
+                <div class="book-corner gold-br"></div>
+              </div>
+            </div>
+
+            <!-- Description and actions -->
+            <div class="featured-content">
+              <div class="featured-details">
+                <span class="category-meta text-gold"
+                  >THE BOOK OF RAMESIS THE SECOND</span
+                >
+                <h3 class="featured-book-title text-gold">
+                  The Egyptian Book of ramesis the second
+                </h3>
+                <p class="featured-author">
+                 
+                </p>
+
+                <!-- Star ratings -->
+                <div class="ratings-row">
+                  <div class="stars-box">★ ★ ★ ★ ★</div>
+                  <span class="rating-number">5.0</span>
+                  <span class="rating-divider">|</span>
+                  <span class="reviews-count">1,420 imperial reviews</span>
+                </div>
+              </div>
+
+              <p class="featured-description">
+               A book about Ramesses II, the founder of Egypt’s Nineteenth Dynasty, explores the life and legacy of a ruler who helped lay the foundation for one of Ancient Egypt’s most powerful periods. Although his reign was short, Ramesses I played an important role in restoring stability to the kingdom and establishing a royal line that would later produce famous pharaohs such as Seti I and Ramesses II. The book examines his rise from a military background to the throne, his contributions to Egyptian government and religion, and the lasting impact of his dynasty on the history of Ancient Egypt. Through historical evidence, monuments, and archaeological discoveries, readers gain insight into the beginnings of the Ramesside era.
+              </p>
+
+              <!-- Specifications -->
+              <div class="specs-grid">
+                <div class="spec-item">
+                  <span class="spec-label">ORIGIN DATE</span>
+                  <span class="spec-value">1250 BCE</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">PAGES COUNT</span>
+                  <span class="spec-value">352 pages</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">EDITION STYLE</span>
+                  <span class="spec-value">Museum Codex</span>
+                </div>
+              </div>
+
+              <div class="featured-actions">
+                <button
+                  id="featured-add-to-cart"
+                  class="btn btn-primary btn-icon"
+                >
+                  <span>ACQUIRE VOLUME</span>
+                  <span class="price-badge">($30)</span>
+                </button>
+
+                <button
+                  id="featured-preview-inside"
+                  class="btn btn-outline-gold btn-icon"
+                >
+                  <svg
+                    class="btn-icon-svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                  </svg>
+                  <span>LOOK INSIDE</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- THIRD RAMESIS BOOK SECTION -->
+      <section id="featured" class="featured-book-section">
+        <div class="featured-ambient-glow"></div>
+
+        <div class="container">
+          <!-- Heading -->
+          <div class="section-header text-center">
+            <div class="title-accent center-accent text-gold">
+              
+             
+            
+            </div>
+            <h2 class="section-title text-gold"></h2>
+            
+          </div>
+
+          <div class="featured-grid">
+            <!-- Book cover artwork -->
+            <div class="featured-media">
+              <div class="book-backing-box"></div>
+              <div class="book-cover-frame">
+                <img
+                  src="assets/book cover two.png"
+                  alt="The Egyptian Book of the Dead"
+                  class="book-cover-img"
+                />
+                <div class="book-cover-shadow"></div>
+                <div class="book-corner gold-tl"></div>
+                <div class="book-corner gold-tr"></div>
+                <div class="book-corner gold-bl"></div>
+                <div class="book-corner gold-br"></div>
+              </div>
+            </div>
+
+            <!-- Description and actions -->
+            <div class="featured-content">
+              <div class="featured-details">
+                <span class="category-meta text-gold"
+                  >THE BOOK OF RAMESIS THE THIRD</span
+                >
+                <h3 class="featured-book-title text-gold">
+                  The Egyptian Book of ramesis the third
+                </h3>
+                <p class="featured-author">
+                 
+                </p>
+
+                <!-- Star ratings -->
+                <div class="ratings-row">
+                  <div class="stars-box">★ ★ ★ ★ ★</div>
+                  <span class="rating-number">5.0</span>
+                  <span class="rating-divider">|</span>
+                  <span class="reviews-count">1,420 imperial reviews</span>
+                </div>
+              </div>
+
+              <p class="featured-description">
+               A book about Ramesses II, also known as Ramesses the Great, explores the life of one of Ancient Egypt’s most powerful and celebrated pharaohs. Ruling for over 66 years during the Nineteenth Dynasty, Ramesses II is remembered for his military campaigns, extensive building projects, and strong leadership. The book examines his famous victory claims at the Battle of Kadesh, the construction of magnificent temples such as Abu Simbel, and his efforts to strengthen Egypt’s economy and influence. Through archaeological discoveries, ancient inscriptions, and historical records, readers gain a deeper understanding of his achievements and why he is regarded as one of the greatest rulers in Egyptian history.
+              </p>
+
+              <!-- Specifications -->
+              <div class="specs-grid">
+                <div class="spec-item">
+                  <span class="spec-label">ORIGIN DATE</span>
+                  <span class="spec-value">1250 BCE</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">PAGES COUNT</span>
+                  <span class="spec-value">352 pages</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">EDITION STYLE</span>
+                  <span class="spec-value">Museum Codex</span>
+                </div>
+              </div>
+
+              <div class="featured-actions">
+                <button
+                  id="featured-add-to-cart"
+                  class="btn btn-primary btn-icon"
+                >
+                  <span>ACQUIRE VOLUME</span>
+                  <span class="price-badge">($30)</span>
+                </button>
+
+                <button
+                  id="featured-preview-inside"
+                  class="btn btn-outline-gold btn-icon"
+                >
+                  <svg
+                    class="btn-icon-svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                  </svg>
+                  <span>LOOK INSIDE</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LIBRARY BOOKSTORE SECTION -->
+    <section id="bookstore" class="bookstore-section">
+    <h2 class="section-title">Characters</h2>
+
+    <div class="card-grid">
+        <!-- Character One -->
+        <div class="card-image" onclick="openTriptych('one')">
+            <h3 class="character-name">Ramesis the second</h3>
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400" alt="Character 1">
+
+          
+        </div>
+
+        <!-- Character Two -->
+        <div class="card-image" onclick="openTriptych('two')">
+            <h3 class="character-name">Ramesis the third</h3>
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400" alt="Character 2">
+        </div>
+    </div>
+</section>
+
+<!-- Triptych Modal -->
+<div id="triptych-modal" class="triptych-modal" onclick="closeTriptych(event)">
+    <span class="triptych-close">&times;</span>
+    
+    <div class="triptych-container">
+        <div class="triptych-panel triptych-left">
+            <img id="triptych-left-img" src="" alt="Left panel">
+        </div>
+        <div class="triptych-panel triptych-center">
+            <img id="triptych-center-img" src="" alt="Center panel">
+        </div>
+        <div class="triptych-panel triptych-right">
+            <img id="triptych-right-img" src="" alt="Right panel">
+        </div>
+    </div>
+</div>
+
+        
+
+</body>
+</html>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+      <div class="footer-top-border"></div>
+      <div class="footer-ankh-watermark">☥</div>
+
+      <div class="container footer-container">
+        <div class="footer-grid">
+          <!-- Brand -->
+          <div class="footer-col brand-col">
+            <a href="#hero" class="logo-link">
+              <div class="logo-icon-box">
+                <svg
+                  class="compass-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polygon
+                    points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"
+                  ></polygon>
+                </svg>
+              </div>
+              <span class="logo-text"></span>
+            </a>
+           
+            <div class="celestial-badge">
+              <span class="badge-label">CELESTIAL TIME: 1300 BCE</span>
+            </div>
+          </div>
+
+          <!-- Links Center -->
+          <div class="footer-col links-col">
+            <div class="links-subgrid">
+              <div class="links-group">
+                <h4 class="footer-h4">Navigation</h4>
+                <ul>
+                  <li><a href="#hero">Sovereign Start</a></li>
+                  <li><a href="#mythology">Mythology</a></li>
+                  <li><a href="#throne-room-1">Throne Room I</a></li>
+                  <li><a href="#throne-room-2">Throne Room II</a></li>
+                </ul>
+              </div>
+              <div class="links-group">
+                <h4 class="footer-h4">Bazaar</h4>
+                <ul>
+                  <li><a href="#posters">Fine Art Prints</a></li>
+                  <li><a href="#featured">Featured Codex</a></li>
+                  <li><a href="#bookstore">Scroll Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="footer-col newsletter-col">
+            <h4 class="footer-h4 text-gold flex-align-center">
+              <svg
+                class="sparkle-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707.707M12 5a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"
+                ></path>
+              </svg>
+             
+
+            <div class="newsletter-form-container">
+              <form id="subscribe-form" class="subscribe-form">
+                <div class="input-relative">
+                  <span class="input-icon">
+                    <svg
+                      class="mail-icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                      ></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </span>
+                  <input
+                    type="email"
+                    id="subscriber-email"
+                    placeholder="students@ancientegypt.net"
+                    required
+                    autocomplete="off"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  class="subscribe-btn"
+                  aria-label="Subscribe"
+                >
+                  <svg
+                    class="send-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+              </form>
+
+              <div id="subscription-success-box" class="success-alert hidden">
+                <svg
+                  class="alert-check"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <div class="alert-info">
+                  <h5 class="alert-h5">DIVINE WISDOM DISPATCHED</h5>
+                  <p class="alert-msg">
+                    The Hieroglyphs Guide scroll has been successfully wired to
+                    your inbox.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <div class="copyright-info">
+            <p>&copy; encyclopedia of ancient Egypt. All rights reserved.</p>
+          </div>
+          <div class="footer-emblems">
+            <span>☥ Ankh</span>
+            <span>𓂀 Eye of Horus</span>
+            <span>𓆣 Scarab</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- CART SIDE-OUT DRAWER -->
+    <div id="cart-drawer-overlay" class="drawer-overlay hidden"></div>
+    <div id="cart-drawer" class="drawer hidden">
+      <!-- Header -->
+      <div class="drawer-header">
+        <span id="drawer-title" class="drawer-title">THE GOLDEN TREASURY</span>
+        <button
+          id="cart-close-btn"
+          class="drawer-close"
+          aria-label="Close Cart"
+        >
+          <svg
+            class="close-icon-svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Scrollable Drawer Body -->
+      <div class="drawer-body" id="cart-drawer-body">
+        <!-- 1. Cart Items View -->
+        <div id="cart-step-view" class="cart-step-container">
+          <!-- Injected via JS -->
+        </div>
+
+        <!-- 2. Delivery Ledger (Checkout) View -->
+        <div id="checkout-step-view" class="checkout-step-container hidden">
+          <form id="checkout-form" class="checkout-form-structure">
+            <h3 class="checkout-h3">RECIPIENT LEDGER</h3>
+
+            <div class="form-group">
+              <label class="form-label">Noble Name</label>
+              <input
+                type="text"
+                id="recipient-name"
+                required
+                placeholder="e.g. Ptah-Mose"
+                class="form-input"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Courier Email</label>
+              <input
+                type="email"
+                id="recipient-email"
+                required
+                placeholder="noble@alexandria.net"
+                class="form-input"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Sanctum Address</label>
+              <input
+                type="text"
+                id="recipient-address"
+                required
+                placeholder="12 Avenue of Sphinxes"
+                class="form-input"
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Province / City</label>
+                <input
+                  type="text"
+                  id="recipient-city"
+                  required
+                  placeholder="Thebes"
+                  class="form-input"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Scribe Code (ZIP)</label>
+                <input
+                  type="text"
+                  id="recipient-zip"
+                  required
+                  placeholder="11432"
+                  class="form-input"
+                />
+              </div>
+            </div>
+
+            <div class="guarantee-box">
+              <svg
+                class="guarantee-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <div class="guarantee-info">
+                <h4 class="guarantee-h4">Scribe's Guarantee</h4>
+                <p class="guarantee-desc">
+                  Your physical volumes are hand-packed in archival wooden boxes
+                  lined with protective linen to guarantee safe shipping across
+                  sea and sand.
+                </p>
+              </div>
+            </div>
+
+            <div class="checkout-actions">
+              <button
+                type="button"
+                id="checkout-back-btn"
+                class="btn btn-outline-gold w-full"
+              >
+                EDIT CART
+              </button>
+              <button type="submit" class="btn btn-primary w-full">
+                SEAL DEAL
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- 3. Checkout Success View -->
+        <div id="success-step-view" class="success-step-container hidden">
+          <div class="success-graphic-box animate-pulse-glow">
+            <svg
+              class="success-check-svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <div class="success-text-box">
+            <h3 class="success-h3">SPELL CAST SUCCESSFULLY</h3>
+            <p class="success-desc">
+              Your order has been recorded by the imperial scribe. A carrier
+              falcon (via email) has been dispatched with delivery blueprints
+              and shipping scrolls.
+            </p>
+          </div>
+
+          <div class="imperial-receipt">
+            <span class="receipt-label"></span>
+            <div class="receipt-row">
+              <span>Status</span>
+              <span class="receipt-approved">Approved by Ra</span>
+            </div>
+            <div class="receipt-row">
+              <span>Courier Line</span>
+              <span>Desert Express Delivery</span>
+            </div>
+            <div class="receipt-row">
+              <span>Recipient</span>
+              <span id="receipt-recipient-name">Noble Scribe</span>
+            </div>
+          </div>
+
+          <button id="success-done-btn" class="btn btn-primary w-full">
+            RETURN TO THE KINGDOM
+          </button>
+        </div>
+      </div>
+
+      <!-- Drawer Footer (Sticky Summary) -->
+      <div class="drawer-footer hidden" id="drawer-summary-footer">
+        <div class="summary-details">
+          <div class="summary-row">
+            <span>Scribe Packing Fee</span>
+            <span class="fee-free">FREE</span>
+          </div>
+          <div class="summary-row total-row">
+            <span class="gold-total-label">Treasury Value</span>
+            <span id="drawer-cart-total" class="gold-total-val">$0.00</span>
+          </div>
+        </div>
+        <button
+          id="drawer-checkout-btn"
+          class="btn btn-primary w-full tracking-widest"
+        >
+          PROCEED TO SCRIBE CONTRACT
+        </button>
+      </div>
+    </div>
+
+    <!-- LOOK INSIDE MODAL (PARCHMENT SCROLL STYLE) -->
+    <div id="parchment-modal-overlay" class="modal-overlay hidden"></div>
+    <div id="parchment-modal" class="modal parchment-modal hidden">
+      <!-- Modal header wrapper spindle -->
+      <div class="parchment-spindle-header">
+        <div class="spindle-title-row">
+          <span>📜</span>
+          <span class="spindle-title">PAPYRUS PREVIEW: BOOK OF THE DEAD</span>
+        </div>
+        <button
+          id="parchment-close-btn"
+          class="modal-close"
+          aria-label="Close Preview"
+        >
+          <svg
+            class="close-icon-svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Parchment inner pages body -->
+      <div class="parchment-inner">
+        <div class="parchment-watermark">𓀀 𓁐 𓃠 𓅃 𓆗 𓎛 𓏏</div>
+
+        <div id="parchment-page-content" class="parchment-page">
+          <!-- Injected via JS -->
+        </div>
+
+        <!-- Navigation spindle footer -->
+        <div class="parchment-pagination">
+          <button id="parchment-prev-btn" class="pag-btn">
+            <svg
+              class="pag-arrow"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            <span>Previous Hymn</span>
+          </button>
+
+          <button id="parchment-next-btn" class="pag-btn">
+            <span>Next Hymn</span>
+            <svg
+              class="pag-arrow"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUICK VIEW DETAIL MODAL -->
+    <div id="quickview-modal-overlay" class="modal-overlay hidden"></div>
+    <div id="quickview-modal" class="modal quickview-modal hidden">
+      <!-- Close -->
+      <button
+        id="quickview-close-btn"
+        class="quickview-close"
+        aria-label="Close modal"
+      >
+        <svg
+          class="close-icon-svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="quickview-inner">
+        <!-- Left side Cover -->
+        <div class="quickview-left">
+          <img
+            id="qv-book-cover"
+            src=""
+            alt="Book Cover"
+            class="qv-cover-img"
+          />
+          <div class="qv-ambient-glow"></div>
+        </div>
+
+        <!-- Right side Spec metadata -->
+        <div class="quickview-right">
+          <div class="qv-header">
+            <span id="qv-book-category" class="qv-category-stamp"
+              >rituals codex</span
+            >
+            <h3 id="qv-book-title" class="qv-book-title">
+              
+            </h3>
+            <p id="qv-book-author" class="qv-book-author">
+              
+            </p>
+          </div>
+
+         
+
+          <!-- specs grid -->
+          <div class="qv-specs">
+            <div class="qv-spec-item">
+              <svg
+                class="qv-spec-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span id="qv-book-year">Era: 1250 BCE</span>
+            </div>
+            <div class="qv-spec-item">
+              <svg
+                class="qv-spec-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path
+                  d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                ></path>
+              </svg>
+              <span id="qv-book-pages">Length: 352 pg</span>
+            </div>
+          </div>
+
+          <div class="qv-footer-row">
+            <span id="qv-book-price" class="qv-book-price">$34.99</span>
+            <button id="qv-acquire-btn" class="btn btn-primary btn-icon">
+              <svg
+                class="btn-icon-svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+                ></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+              <span>ACQUIRE</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

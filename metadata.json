@@ -1,0 +1,6 @@
+{
+  "name": "Discover the Mysteries of Egypt",
+  "description": "An immersive interactive experience exploring the mythology, art, and books of Ancient Egypt, featuring visual throne rooms, book promotion, and a premium print collection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
