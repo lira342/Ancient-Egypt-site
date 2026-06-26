@@ -1241,13 +1241,13 @@ function openQuickViewModal(book) {
 // Character One's triptych (3 unique images)
 const triptychData = {
     one: {
-        left:   'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600',   // Character 1 left
-        center: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=1200',  // Character 1 center
-        right:  'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600'   // Character 1 right
+        left:   '/assets/Ramesses-Character-Design-LEFT.JPG',   // Character 1 left
+        center: '/assets/Ramesses-Character-Design-CENTER.jpg',  // Character 1 center
+        right:  '/assets/Ramesses-Character-Design-RIGHT.JPG'   // Character 1 right
     },
     two: {
         left:   'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600',   // Character 2 left
-        center: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=1200',  // Character 2 center
+        center: '/assets/RAMESIS3-01.jpg',  // Character 2 center
         right:  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600'    // Character 2 right
     }
 };

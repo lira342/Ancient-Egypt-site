@@ -556,7 +556,7 @@ header:not(.scrolled) {
   font-size: 14px;
   color: rgba(245, 235, 224, 0.7);
   line-height: 1.6;
-  max-w: 520px;
+  max-width: 520px;
 }
 
 .hero-buttons {
@@ -585,7 +585,7 @@ header:not(.scrolled) {
 .collage-image {
   width: 100%;
   height: 100%;
-  object-cover: cover;
+  justify-content: cover;
   transition: transform 1.2s ease-out;
 }
 
@@ -900,7 +900,7 @@ header:not(.scrolled) {
   line-height: 1.65;
   color: rgba(31, 16, 8, 0.85);
   margin-bottom: 24px;
-  max-w: 480px;
+  max-width: 480px;
 }
 
 .arrow-icon {
@@ -1550,7 +1550,7 @@ header:not(.scrolled) {
   color: var(--color-brown);
   transition: var(--transition-smooth);
   display: -webkit-box;
-  -webkit-line-clamp: 1;
+  -webkit-line-lamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -1564,7 +1564,7 @@ header:not(.scrolled) {
   color: rgba(61, 35, 20, 0.7);
   line-height: 1.45;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-lamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -1938,7 +1938,7 @@ header:not(.scrolled) {
   font-size: 13px;
   color: rgba(245, 235, 224, 0.7);
   line-height: 1.55;
-  max-w: 520px;
+  max-width: 520px;
 }
 
 /* Countdown Clock */
@@ -2299,7 +2299,7 @@ header:not(.scrolled) {
   color: var(--color-brown);
   transition: var(--transition-smooth);
   display: -webkit-box;
-  -webkit-line-clamp: 1;
+  -webkit-line-lamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -2313,7 +2313,7 @@ header:not(.scrolled) {
   color: rgba(61, 35, 20, 0.7);
   line-height: 1.5;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-lamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -2421,7 +2421,7 @@ footer {
   font-size: 11px;
   color: rgba(245, 235, 224, 0.55);
   line-height: 1.6;
-  max-w: 320px;
+  max-width: 320px;
 }
 
 .celestial-badge {
@@ -2793,7 +2793,7 @@ footer {
   font-size: 11px;
   color: var(--color-beige);
   display: -webkit-box;
-  -webkit-line-clamp: 1;
+  -webkit-line-lamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -3061,7 +3061,7 @@ footer {
   font-size: 11.5px;
   color: rgba(245, 235, 224, 0.85);
   line-height: 1.55;
-  max-w: 280px;
+  max-width: 280px;
 }
 
 .imperial-receipt {
@@ -3556,7 +3556,7 @@ footer {
 
   .mythology-grid {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 50px;
     text-align: center;
   }
 
@@ -4062,21 +4062,21 @@ body {
 
 .triptych-panel img {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   object-fit: cover;
   display: block;
 }
 
 .triptych-center {
   width: 45vw;
-  height: 75vh;
+  height: 100vh;
   flex-shrink: 0;
 }
 
 .triptych-left,
 .triptych-right {
   width: 22vw;
-  height: 65vh;
+  height: 100vh;
   opacity: 0.85;
   filter: brightness(0.7);
   transition: all 0.3s ease;
@@ -4100,7 +4100,7 @@ body {
   .triptych-left,
   .triptych-right {
     width: 85vw;
-    height: 20vh;
+    height: 70vh;
     opacity: 1;
     filter: none;
   }
