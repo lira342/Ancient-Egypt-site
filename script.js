@@ -1241,9 +1241,9 @@ function openQuickViewModal(book) {
 // Character One's triptych (3 unique images)
 const triptychData = {
     one: {
-        left:   '/assets/Ramesses-Character-Design-LEFT.JPG',   // Character 1 left
+        left:   '/assets/Ramesses-Character-Design-LEFT.jpg',   // Character 1 left
         center: '/assets/Ramesses-Character-Design-CENTER.jpg',  // Character 1 center
-        right:  '/assets/Ramesses-Character-Design-RIGHT.JPG'   // Character 1 right
+        right:  '/assets/Ramesses-Character-Design-RIGHT.jpg'   // Character 1 right
     },
     two: {
         left:   '/assets/ramesis-phenyo-left.png',   // Character 2 left
