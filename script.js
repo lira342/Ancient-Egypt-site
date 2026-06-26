@@ -1246,7 +1246,7 @@ const triptychData = {
         right:  '/assets/Ramesses-Character-Design-RIGHT.jpg'   // Character 1 right
     },
     two: {
-        left:   '/assets/ramesis-phenyo-left.png',   // Character 2 left
+        left:   '/assets/ramesis phenyo left.png',   // Character 2 left
         center: '/assets/RAMESIS3-01.jpg',  // Character 2 center
         right:  '/assets/ramesis phenyo right.png'
     }
