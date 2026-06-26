@@ -1246,9 +1246,9 @@ const triptychData = {
         right:  '/assets/Ramesses-Character-Design-RIGHT.JPG'   // Character 1 right
     },
     two: {
-        left:   'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600',   // Character 2 left
+        left:   '/assets/ramesis phenyo left.png',   // Character 2 left
         center: '/assets/RAMESIS3-01.jpg',  // Character 2 center
-        right:  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600'    // Character 2 right
+        right:  '/assets/ramesis phenyo right.png'
     }
 };
 
