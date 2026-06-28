@@ -1,11 +1,3 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
-// ==========================================================================
-// DATA DECLARATIONS (Translated from src/data.ts)
-// ==========================================================================
 
 const BOOKS = [
   {
@@ -1096,9 +1088,6 @@ function renderCartDrawerItems() {
   });
 }
 
-// ==========================================================================
-// MODALS SYSTEM (Parchment Look Inside & Bookstore Quick View)
-// ==========================================================================
 
 function setupModals() {
   const parchmentOverlay = document.getElementById("parchment-modal-overlay");
@@ -1278,3 +1267,32 @@ document.addEventListener('keydown', (e) => {
         document.body.style.overflow = '';
     }
 });
+
+const cards = document.querySelectorAll('.card-image');
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const modalCaption = document.getElementById('modalCaption');
+        const closeBtn = modal.querySelector('.modal-close');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const img = card.querySelector('img');
+                modalImg.src = img.src;
+                modalCaption.textContent = img.alt;
+                modal.classList.add('active');
+            });
+        });
+
+        function closeModal() {
+            modal.classList.remove('active');
+        }
+
+        closeBtn.addEventListener('click', closeModal);
+
+        //modal.addEventListener('click', (e) => {
+         //   if (e.target === modal) closeModal();
+       // });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
