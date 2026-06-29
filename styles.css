@@ -1121,6 +1121,7 @@ header:not(.scrolled) {
   height: 100%;
   object-fit: cover;
   display: block;
+  transform: scale(1.15);
 }
 
 .dark-opacity {
@@ -1321,7 +1322,7 @@ header:not(.scrolled) {
 }
 
 .panel-line {
-  width: 40px;
+  width: 60px;
   height: 1px;
   background-color: var(--color-gold);
   margin-top: 8px;
@@ -3685,7 +3686,7 @@ footer {
   /* Interactive Throne Rooms */
   .throne-room-grid {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: px;
   }
 
   .interactive-viewport {
