@@ -1121,7 +1121,6 @@ header:not(.scrolled) {
   height: 100%;
   object-fit: cover;
   display: block;
-  transform: scale(1.15);
 }
 
 .dark-opacity {
@@ -1398,33 +1397,6 @@ header:not(.scrolled) {
 /* ==========================================================================
    POSTERS GALLERY SECTION (Beige Light Theme Grid)
    ========================================================================== */
-.posters-section {
-  position: relative;
-  background-color: var(--color-beige);
-  color: var(--color-black);
-  padding: 96px 0;
-  overflow: hidden;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
-}
-
-.accent-icon-svg {
-  width: 16px;
-  height: 16px;
-  color: var(--color-gold);
-}
-
-.max-w-xl {
-  max-width: 540px;
-}
-
-.posters-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
-  margin-top: 48px;
-}
-
-/* Poster Card */
 .poster-card {
   display: flex;
   flex-direction: column;
@@ -1460,151 +1432,8 @@ header:not(.scrolled) {
 .poster-card:hover .poster-img {
   transform: scale(1.05);
 }
-
-/* Stamp labels */
-.size-stamp {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background-color: rgba(12, 10, 9, 0.85);
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(212, 175, 55, 0.25);
-  padding: 2px 8px;
-  border-radius: 2px;
-  font-family: var(--font-sans);
-  font-size: 8px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  color: var(--color-gold);
-}
-
-.rating-stamp {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background-color: rgba(12, 10, 9, 0.85);
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(212, 175, 55, 0.25);
-  padding: 2px 8px;
-  border-radius: 2px;
-  font-family: var(--font-sans);
-  font-size: 8px;
-  font-weight: 600;
-  color: var(--color-gold);
-  display: flex;
-  align-items: center;
-  gap: 3px;
-}
-
-.star-mini {
-  color: var(--color-gold);
-}
-
-/* Hover add button */
-.poster-hover-layer {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(12, 10, 9, 0.65);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-  opacity: 0;
-  transition: var(--transition-smooth);
-}
-
-.poster-card:hover .poster-hover-layer {
-  opacity: 1;
-}
-
-.poster-hover-layer .btn {
-  transform: translateY(12px);
-  padding: 10px 20px;
-  font-size: 9px;
-  transition: var(--transition-smooth);
-}
-
-.poster-card:hover .poster-hover-layer .btn {
-  transform: translateY(0);
-}
-
-/* Poster Card Details */
-.poster-body {
-  padding: 16px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.poster-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.poster-title {
-  font-family: var(--font-serif-egypt);
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--color-brown);
-  transition: var(--transition-smooth);
-  display: -webkit-box;
-  -webkit-line-lamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.poster-card:hover .poster-title {
-  color: var(--color-gold-dark);
-}
-
-.poster-desc {
-  font-size: 11px;
-  color: rgba(61, 35, 20, 0.7);
-  line-height: 1.45;
-  display: -webkit-box;
-  -webkit-line-lamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.poster-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 10px;
-  border-top: 1px solid rgba(212, 175, 55, 0.12);
-}
-
-.poster-price {
-  font-family: var(--font-sans);
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--color-gold-dark);
-}
-
-.poster-buy-btn {
-  background: none;
-  border: none;
-  font-family: var(--font-sans);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(61, 35, 20, 0.65);
-  cursor: pointer;
-  transition: var(--transition-smooth);
-  outline: none;
-}
-
-.poster-card:hover .poster-buy-btn {
-  color: var(--color-gold-dark);
-}
-
 /* ==========================================================================
-   FEATURED BOOK SECTION (Luxury Ancient Codex Look)
+FEATURED BOOK SECTION (Luxury Ancient Codex Look)
    ========================================================================== */
 .featured-book-section {
   position: relative;
