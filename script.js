@@ -1289,10 +1289,34 @@ const cards = document.querySelectorAll('.card-image');
 
         closeBtn.addEventListener('click', closeModal);
 
-        //modal.addEventListener('click', (e) => {
-         //   if (e.target === modal) closeModal();
-       // });
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
 
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') closeModal();
         });
+
+
+
+        const poses = document.querySelectorAll('.card');
+
+for(let i = 0; i < poses.length; i++) {
+  let card = poses[i];
+  card.addEventListener('mousemove', startRotate);
+  card.addEventListener('mouseout', stopRotate);
+}
+
+function startRotate(event) {
+  const cardItem = this.querySelector('.item-card');
+  const halfHeight = cardItem.offsetHeight / 2;
+  const halfWidth = cardItem.offsetWidth / 2;
+  cardItem.style.transform = 'rotateX(' + -(event.offsetY - halfHeight) / 5 + 'deg) rotateY(' + (event.offsetX - halfHeight) / 5 +  'deg)';
+  // you can change 5 to another number for more effect;
+}
+
+
+function stopRotate(event) {
+  const cardItem = this.querySelector('.item-card');
+  cardItem.style.transform = 'rotate(0)'
+}
