@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egyptian Mythology - Ancient Egypt</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap');
+        
+        :root {
+            --gold: #c9a84c;
+            --dark-gold: #8b6914;
+            --papyrus: #f4e4bc;
+            --dark-papyrus: #d4c4a0;
+            --night-blue: black;
+            --deep-blue: #000000;
+            --sand: #e6d5ac;
+            --text-dark: #2c2416;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif', serif;
+            background-image: url(/assets/Background.jpg);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: black;
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--gold);
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border: 1px solid transparent;
+        }
+
+        nav a:hover {
+            color: var(--papyrus);
+            border-color: var(--gold);
+            text-shadow: 0 0 10px var(--gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(26,26,46,0.7) 0%, rgba(22,33,62,0.9) 100%), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect fill="%231a1a2e" width="100" height="100"/><circle cx="50" cy="50" r="40" fill="none" stroke="%23c9a84c" stroke-width="0.5" opacity="0.3"/><circle cx="50" cy="50" r="30" fill="none" stroke="%23c9a84c" stroke-width="0.3" opacity="0.2"/></svg>');
+            background-size: cover;
+            position: relative;
+            padding: 2rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, black 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            color: var(--gold);
+            text-shadow: 0 0 20px rgba(201, 168, 76, 0.5);
+            margin-bottom: 1rem;
+            letter-spacing: 5px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            color: var(--sand);
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        .hero .divider {
+            width: 200px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin: 2rem auto;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-20px); }
+            60% { transform: translateX(-50%) translateY(-10px); }
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        section:nth-child(even) {
+            background: linear-gradient(180deg, var(--deep-blue) 0%, var(--night-blue) 100%);
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--gold);
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin-top: 1rem;
+        }
+
+        /* Creation Myth */
+        .creation-story {
+            background: rgba(201, 168, 76, 0.05);
+            border: 1px solid rgba(201, 168, 76, 0.3);
+            border-radius: 10px;
+            padding: 3rem;
+            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .creation-story::before {
+            content: '𓂀';
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+            font-size: 3rem;
+            opacity: 0.1;
+            color: var(--gold);
+        }
+
+        .story-text {
+            font-size: 1.1rem;
+            line-height: 2;
+            text-align: justify;
+            color: var(--papyrus);
+        }
+
+        .story-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight {
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        /* God Cards */
+        .pantheon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .god-card {
+            background: black;
+            border: 2px solid var(--dark-gold);
+            border-radius: 15px;
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .god-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold), var(--dark-gold), var(--gold));
+        }
+
+        .god-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(201, 168, 76, 0.2);
+            border-color: var(--gold);
+        }
+
+        .god-card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .god-card .god-title {
+            color: var(--sand);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+        }
+
+        .god-card .god-description {
+            color: var(--papyrus);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .god-card .god-attributes {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(201, 168, 76, 0.3);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .attribute-tag {
+            background: rgba(201, 168, 76, 0.15);
+            border: 1px solid var(--dark-gold);
+            color: var(--gold);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Family Tree */
+        .family-tree {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: black;
+            border-radius: 15px;
+            border: 1px solid rgba(201, 168, 76, 0.2);
+        }
+
+        .tree-level {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .tree-node {
+            background: linear-gradient(135deg, var(--dark-gold) 0%, var(--gold) 100%);
+            color: var(--night-black);
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            text-align: center;
+            min-width: 150px;
+            box-shadow: 0 5px 15px rgba(201, 168, 76, 0.3);
+            position: relative;
+        }
+
+        .tree-node::after {
+            content: '';
+            position: absolute;
+            bottom: -2rem;
+            left: 50%;
+            width: 2px;
+            height: 2rem;
+            background: var(--gold);
+            transform: translateX(-50%);
+        }
+
+        .tree-level:last-child .tree-node::after {
+            display: none;
+        }
+
+        .tree-connector {
+            width: 60%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin: 0.5rem 0;
+        }
+
+        /* Armor Section */
+        .armor-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .armor-visual {
+            background: black;
+            border: 2px solid var(--gold);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            position: relative;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .armor-visual::before {
+            content: '⚔';
+            font-size: 5rem;
+            color: var(--gold);
+            opacity: 0.3;
+            margin-bottom: 1rem;
+        }
+
+        .armor-visual h4 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .armor-details {
+            padding: 2rem;
+        }
+
+        .detail-item {
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--gold);
+        }
+
+        .detail-item h5 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .detail-item p {
+            color: var(--papyrus);
+            line-height: 1.7;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--gold), var(--dark-gold), var(--gold));
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 50%;
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-item:nth-child(even) {
+            justify-content: flex-start;
+            padding-right: 0;
+            padding-left: 50%;
+        }
+
+        .timeline-content {
+            background: black;
+            border: 1px solid var(--gold);
+            border-radius: 10px;
+            padding: 2rem;
+            max-width: 400px;
+            margin: 0 2rem;
+            position: relative;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            background: var(--gold);
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            right: -2.5rem;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: -2.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--night-blue);
+            border-top: 2px solid var(--gold);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--sand);
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-divider {
+            width: 100px;
+            height: 2px;
+            background: var(--gold);
+            margin: 1rem auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .armor-showcase {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline::before {
+                left: 2rem;
+            }
+            
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                justify-content: flex-start;
+                padding-left: 4rem;
+                padding-right: 0;
+            }
+            
+            .timeline-content::before,
+            .timeline-item:nth-child(even) .timeline-content::before {
+                left: -2.5rem;
+                right: auto;
+            }
+            
+            .creation-story {
+                padding: 1.5rem;
+            }
+            
+            nav ul {
+                gap: 0.5rem;
+            }
+            
+            nav a {
+                font-size: 0.75rem;
+                padding: 0.3rem 0.6rem;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--night-blue);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--dark-gold);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--gold);
+        }
+
+        /* Decorative elements */
+        .hieroglyph-border {
+            text-align: center;
+            font-size: 1.5rem;
+            letter-spacing: 10px;
+            color: var(--gold);
+            opacity: 0.5;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#creation">Creation</a></li>
+            <li><a href="#pantheon">Pantheon</a></li>
+            <li><a href="#family">Family Tree</a></li>
+            <li><a href="#armor">Armor</a></li>
+            <li><a href="#society">Society</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>EGYPTIAN MYTHOLOGY</h1>
+            <div class="divider"></div>
+            <p class="subtitle">"From the Dark Waters of Nun to the Eternal Sky of Nut"</p>
+            <p style="margin-top: 2rem; color: var(--sand); max-width: 600px; font-size: 1.1rem;">
+                Explore the ancient beliefs that shaped one of history's greatest civilizations — 
+                a world where gods walked among mortals and magic flowed through the Nile.
+            </p>
+        </div>
+        <div class="scroll-indicator">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2">
+                <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+            </svg>
+        </div>
+    </header>
+
+    <section id="creation">
+        <h2 class="section-title">The Creation Myth</h2>
+        
+        <div class="creation-story fade-in">
+            <div class="story-text">
+                <p>
+                    To the Egyptians, the creation of the world and universe came out of <span class="highlight">darkness</span>. 
+                    According to them, nothing existed except for endless dark waters known as <span class="highlight">Nun</span>.
+                </p>
+                
+                <p>
+                    <span class="highlight">Heka</span>, the god of magic and medicine, is believed to have already existed by this time 
+                    and awaited the creation of all things. From these dark waters rose a primordial hill known as 
+                    <span class="highlight">Ben-Ben</span>, which the god <span class="highlight">Atum</span> stood over.
+                </p>
+                
+                <p>
+                    Atum, seeing the nothingness of the dark waters and out of his own loneliness, used magic to mate with 
+                    a shadow of himself and gave birth to two children. Whether he or his shadow gave birth to them is unclear, 
+                    but it is said the first one, <span class="highlight">Shu</span>, the god of air, he spat out, and the second one, 
+                    <span class="highlight">Tefnut</span>, the goddess of moisture, he vomited out.
+                </p>
+                
+                <p>
+                    Shu is said to have given the world the <span class="highlight">principles of life</span>, while Tefnut gave 
+                    the world the <span class="highlight">principles of order</span>.
+                </p>
+                
+                <p>
+                    The two sibling gods left their father to establish the world. After a long time, Atum grew worried and 
+                    removed his eye, sending it out in search of his children. As he awaited their return, he contemplated 
+                    the concept of <span class="highlight">eternity</span>.
+                </p>
+                
+                <p>
+                    When his children returned with his eye, he shed <span class="highlight">tears of joy</span>, and these tears 
+                    landed on the fertile primordial hill and gave birth to <span class="highlight">human beings</span>.
+                </p>
+                
+                <p>
+                    Shu and Tefnut mated and gave birth to <span class="highlight">Geb</span> (the Earth) and <span class="highlight">Nut</span> 
+                    (the Sky), so that humans had a place to live. The siblings fell deeply in love, which Atum found unacceptable. 
+                    He pushed Nut high up into the heavens and Geb remained below — two lovers who could see each other but never touch.
+                </p>
+                
+                <p>
+                    Atum had parted them too late, however, as Nut was already impregnated by Geb. She eventually gave birth to 
+                    <span class="highlight">Osiris, Isis, Set, Horus, and Nephthys</span> — the most commonly known gods within the Egyptian pantheon.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pantheon">
+        <h2 class="section-title">The Pantheon of Gods</h2>
+        
+        <div class="pantheon-grid">
+            <div class="god-card fade-in">
+                <h3>Amun</h3>
+                <div class="god-title">Supreme Creator God of All Creation</div>
+                <div class="god-description">
+                    Amun rose out of a primordial hill, and recognizing how lonely he was and the nothingness all around him, 
+                    created the universe. He is the father of all the gods.
+                    <br><br>
+                    Upon the reunification of Upper and Lower Egypt, Ahmose I reinvented Amun as <strong>Amun-Ra</strong>, combining 
+                    the local patron god Amun with the sun god Ra of Lower Egypt to achieve both theological and political legitimacy.
+                    <br><br>
+                    <em>Depicted as a bearded man wearing a headdress with two tall plumes. In the New Kingdom, represented as a ram-headed man.</em>
+                </div>
+                <div class="god-attributes">
+                    <span class="attribute-tag">Creator</span>
+                    <span class="attribute-tag">King of Gods</span>
+                    <span class="attribute-tag">Amun-Ra</span>
+                    <span class="attribute-tag">Theban</span>
+                </div>
+            </div>
+
+            <div class="god-card fade-in">
+                <h3>Heka</h3>
+                <div class="god-title">God of Magic and Medicine</div>
+                <div class="god-description">
+                    Heka is said to have existed before Atum and was the mystical force behind creation itself, used by Atum 
+                    to bring the world into existence.
+                    <br><br>
+                    Most of what is known about Heka comes from Egyptian medical texts, spells, and incantations. He is also 
+                    seen in funerary inscriptions meant to guide the soul in the afterlife.
+                    <br><br>
+                    <em>Depicted as a man in royal dress, wearing the regal curved beard of the gods and carrying a staff 
+                    entwined with two serpents — a symbol later adopted by the Greeks for Asclepius and now the symbol of the medical profession.</em>
+                </div>
+                <div class="god-attributes">
+                    <span class="attribute-tag">Magic</span>
+                    <span class="attribute-tag">Medicine</span>
+                    <span class="attribute-tag">Primordial</span>
+                    <span class="attribute-tag">Healing</span>
+                </div>
+            </div>
+
+            <div class="god-card fade-in">
+                <h3>Osiris</h3>
+                <div class="god-title">Lord and Judge of the Dead</div>
+                <div class="god-description">
+                    His name in ancient Egyptian means "Powerful" or "Mighty." Birthed by Nut the sky goddess, he was later 
+                    killed by his brother Set, then resurrected by his wife Isis, known as the "Mother of the Gods."
+                    <br><br>
+                    He fathered Horus and went into the underworld to serve as Judge of the Dead. According to the Book of the Dead, 
+                    he weighs the hearts of the dead against the white feather of Ma'at — the Feather of Truth.
+                    <br><br>
+                    <em>Depicted as a mummy with green or black skin, symbolizing the fertility of the Nile region.</em>
+                </div>
+                <div class="god-attributes">
+                    <span class="attribute-tag">Afterlife</span>
+                    <span class="attribute-tag">Resurrection</span>
+                    <span class="attribute-tag">Judge</span>
+                    <span class="attribute-tag">Fertility</span>
+                </div>
+            </div>
+
+            <div class="god-card fade-in">
+                <h3>Horus</h3>
+                <div class="god-title">God of the Sky, Sun and Divine Kingship</div>
+                <div class="god-description">
+                    There are two Horuses in Egyptian mythology: Horus the Elder (one of five gods born from Nut) and 
+                    Horus the Younger, the more popular figure, son of Osiris and Isis after Osiris' resurrection.
+                    <br><br>
+                    After Set murdered Osiris, Isis resurrected him and conceived Horus. Horus and his mother fled to the 
+                    Delta swamps, where he was raised. When he came of age, he avenged his father's murder and defeated Set, 
+                    becoming ruler of all Egypt.
+                    <br><br>
+                    <em>Most kings of Egypt linked themselves to Horus in life and Osiris in death, depicting themselves as the living incarnation of Horus.</em>
+                </div>
+                <div class="god-attributes">
+                    <span class="attribute-tag">Sky God</span>
+                    <span class="attribute-tag">Kingship</span>
+                    <span class="attribute-tag">Vengeance</span>
+                    <span class="attribute-tag">Eye of Horus</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="family">
+        <h2 class="section-title">Divine Family Tree</h2>
+        
+        <div class="family-tree fade-in">
+            <div class="tree-level">
+                <div class="tree-node">Atum<br><small>The Self-Created</small></div>
+            </div>
+            
+            <div class="tree-connector"></div>
+            
+            <div class="tree-level">
+                <div class="tree-node">Shu<br><small>Air & Life</small></div>
+                <div class="tree-node">Tefnut<br><small>Moisture & Order</small></div>
+            </div>
+            
+            <div class="tree-connector"></div>
+            
+            <div class="tree-level">
+                <div class="tree-node">Geb<br><small>The Earth</small></div>
+                <div class="tree-node">Nut<br><small>The Sky</small></div>
+            </div>
+            
+            <div class="tree-connector"></div>
+            
+            <div class="tree-level">
+                <div class="tree-node">Osiris</div>
+                <div class="tree-node">Isis</div>
+                <div class="tree-node">Set</div>
+                <div class="tree-node">Horus the Elder</div>
+                <div class="tree-node">Nephthys</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="armor">
+        <h2 class="section-title">Armor & Regalia</h2>
+        
+        <div class="armor-showcase fade-in">
+            <div class="armor-visual">
+                <h4>The Kepresh</h4>
+                <p style="color: var(--sand); font-style: italic;">Royal Battle Crown</p>
+                <div style="margin-top: 2rem; text-align: left; color: var(--papyrus);">
+                    <p style="margin-bottom: 1rem;"><strong style="color: var(--gold);">Material:</strong> Stiffened leather layered with cloth dyed blue</p>
+                    <p style="margin-bottom: 1rem;"><strong style="color: var(--gold);">Decoration:</strong> Golden discs (studded)</p>
+                    <p><strong style="color: var(--gold);">Purpose:</strong> Authority, military prowess, divine protection</p>
+                </div>
+            </div>
+            
+            <div class="armor-details">
+                <div class="detail-item">
+                    <h5>Symbolism & Authority</h5>
+                    <p>The Kepresh was worn by Pharaohs into battle and symbolized authority, military prowess, and divine protection. It served as a visible manifestation of the king's dual role as both military leader and divine intermediary.</p>
+                </div>
+                
+                <div class="detail-item">
+                    <h5>Construction & Materials</h5>
+                    <p>The headgear was crafted from stiffened leather and layered with cloth dyed blue — a color associated with the heavens and divinity. It was often studded with golden discs, though some variations existed without them.</p>
+                </div>
+                
+                <div class="detail-item">
+                    <h5>Psychological Warfare</h5>
+                    <p>Although it offered some physical protection, the Kepresh served primarily for psychological impact against enemies on the battlefield. Its distinctive appearance made the Pharaoh easily identifiable, commanding both awe and fear.</p>
+                </div>
+                
+                <div class="detail-item">
+                    <h5>Artistic Elements</h5>
+                    <p>The use of blue dye references the celestial realm of the gods, while the golden discs represent the sun (Ra) and divine radiance. The stiffened structure creates imposing vertical lines, emphasizing the Pharaoh's elevated status above mortal men.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="society">
+        <h2 class="section-title">Impact on Society</h2>
+        
+        <div class="timeline fade-in">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3 style="font-family: 'Cinzel', serif; color: var(--gold); margin-bottom: 0.5rem;">Daily Life</h3>
+                    <p>Egyptian mythology permeated every aspect of daily existence. From morning rituals honoring Ra's journey across the sky to household shrines for protective deities like Bes, religious practice was not confined to temples. The concept of Ma'at (truth, balance, and order) guided moral behavior, social interactions, and legal proceedings.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3 style="font-family: 'Cinzel', serif; color: var(--gold); margin-bottom: 0.5rem;">Trade & Economy</h3>
+                    <p>Religious beliefs directly influenced trade networks. Temples served as economic centers, managing vast agricultural estates. The demand for incense, myrrh, and gold for ritual purposes drove extensive trade routes through Nubia, Punt, and the Levant. Funerary goods created entire industries of craftsmen, from papyrus makers to canopic jar artisans.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3 style="font-family: 'Cinzel', serif; color: var(--gold); margin-bottom: 0.5rem;">Politics & Kingship</h3>
+                    <p>The Pharaoh was considered the living embodiment of Horus, maintaining Ma'at against the forces of chaos (Isfet). Political legitimacy derived directly from theological endorsement — as seen when Ahmose I merged Amun with Ra to unify a divided kingdom. Military campaigns were framed as cosmic battles between order and chaos, with the king as divine champion.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3 style="font-family: 'Cinzel', serif; color: var(--gold); margin-bottom: 0.5rem;">Art & Architecture</h3>
+                    <p>Artistic conventions were governed by religious symbolism rather than realism. Scale indicated importance, not perspective. Temples were designed as cosmic models, with pylons representing the horizon and sanctuary chambers as the womb of creation. The prohibition against depicting certain gods in specific contexts shaped the evolution of Egyptian artistic tradition for millennia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="hieroglyph-border">𓀀 𓀁 𓀂 𓀃 𓀄 𓀅 𓀆 𓀇 𓀈 𓀉</div>
+
+    <footer>
+        <div class="footer-content">
+            <h3 style="font-family: 'Cinzel', serif; color: var(--gold); margin-bottom: 1rem;">Egyptian Mythology</h3>
+            <div class="footer-divider"></div>
+            <p style="font-style: italic; margin-bottom: 1rem;">"The gods are not separate from the world; they are the world, and the world is them."</p>
+            <p style="font-size: 0.9rem; opacity: 0.7;">An exploration of ancient Egyptian cosmology, divinity, and cultural legacy.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Parallax effect for hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+    </script>
+</body>
+</html>

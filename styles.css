@@ -19,13 +19,17 @@
   --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Global Reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.hero-section,
 .mythology-section,
+.triptych-section,
 .throne-room-section,
 .featured-book-section,
 .promo-section,
-.bookstore-section,
 .posters-section,
 .container-poses,
 .footer-top-border,
@@ -51,8 +55,8 @@ body {
 
 /* Scrollbar Customization */
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 8px;
+  width: 100%;
+  height: 100%;
 }
 
 ::-webkit-scrollbar-track {
@@ -72,7 +76,7 @@ body {
 /* Text Selection */
 ::selection {
   background: var(--color-gold);
-  color: var(--color-black);
+  color: #f2e8d5;
 }
 
 /* Helpers & Core Utilities */
@@ -454,8 +458,8 @@ header:not(.scrolled) {
   flex-direction: column;
   justify-content: space-between;
   padding-top: 110px;
-  padding-bottom: 40px;
-  background-image: url(/assets/Background.jpg);
+  padding-bottom: 50px;
+  background-color:  rgb(17, 15, 2);
   overflow: hidden;
 }
 
@@ -501,8 +505,8 @@ header:not(.scrolled) {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 48px;
+  grid-template-columns: 1fr 1fr;
+  gap: 150px;
   align-items: center;
   padding-top: 32px;
 }
@@ -561,7 +565,7 @@ header:not(.scrolled) {
 
 .hero-buttons {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
@@ -574,7 +578,7 @@ header:not(.scrolled) {
 .collage-frame {
   position: relative;
   width: 100%;
-  max-width: 480px;
+  max-width: 880px;
   aspect-ratio: 16 / 11;
   border-radius: 12px;
   border: 1px solid rgba(212, 175, 55, 0.2);
@@ -603,7 +607,7 @@ header:not(.scrolled) {
 /* Frame Corner Accents */
 .corner-accent {
   position: absolute;
-  width: 24px;
+  width: px;
   height: 24px;
   border: 2px solid #a87449;
   pointer-events: none;
@@ -636,10 +640,17 @@ header:not(.scrolled) {
 
 /* Triptych Arches Below Hero */
 .triptych-container {
-  margin-top: 80px;
+  margin-top: 90px;
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.triptych-section {
+  position: relative;
+  padding: 96px 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.1);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
 }
 
 .triptych-grid {
@@ -672,7 +683,7 @@ header:not(.scrolled) {
 }
 
 .side-arch {
-  max-width: 130px;
+  max-width: 300px;
 }
 
 .center-arch-translate {
@@ -682,6 +693,8 @@ header:not(.scrolled) {
 .center-arch {
   border-color: var(--color-gold);
   box-shadow: 0 0 25px rgba(212, 175, 55, 0.1);
+  max-width: 520px;
+  max-height: 900px;
 }
 
 .arch-image {
@@ -705,11 +718,9 @@ header:not(.scrolled) {
   inset: 0;
   background-color: rgba(61, 35, 20, 0.2);
   transition: var(--transition-smooth);
+  
 }
 
-.active-overlay {
-  background-color: rgba(12, 10, 9, 0.1);
-}
 
 /* Group Interactions */
 .triptych-arch-wrapper:hover .arch-frame {
@@ -735,7 +746,7 @@ header:not(.scrolled) {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: rgba(212, 175, 55, 0.65);
-  margin-top: 12px;
+  margin-top: 30px;
   text-align: center;
   transition: var(--transition-smooth);
 }
@@ -802,8 +813,8 @@ header:not(.scrolled) {
    ========================================================================== */
 .mythology-section {
   position: relative;
-  background-color: var(--color-beige);
-  color: var(--color-black);
+  background-color: var(--color-white);
+  color: var(--color-white);
   padding: 96px 0;
   overflow: hidden;
 }
@@ -871,7 +882,7 @@ header:not(.scrolled) {
 }
 
 .mythology-title {
-  font-family: var(--font-display-egypt);
+  font-family: white-space, var(--font-display-egypt);
   font-size: 34px;
   line-height: 1.25;
   color: var(--color-brown);
@@ -882,7 +893,7 @@ header:not(.scrolled) {
   font-family: var(--font-playfair);
   font-style: italic;
   font-weight: 500;
-  color: var(--color-gold-dark);
+  color: var(--color-white);
   font-size: 15px;
   margin-top: 8px;
 }
@@ -890,7 +901,7 @@ header:not(.scrolled) {
 .section-divider {
   width: 64px;
   height: 2px;
-  background-color: var(--color-gold);
+  background-color: white;
   margin-top: 16px;
   margin-bottom: 20px;
 }
@@ -898,7 +909,7 @@ header:not(.scrolled) {
 .mythology-description {
   font-size: 14px;
   line-height: 1.65;
-  color: rgba(31, 16, 8, 0.85);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 24px;
   max-width: 480px;
 }
@@ -954,7 +965,7 @@ header:not(.scrolled) {
 
 .throne-image {
   width: 100%;
-  max-height: 380px;
+  max-height: 400px;
   object-fit: contain;
   display: block;
   margin: 0 auto;
@@ -969,11 +980,11 @@ header:not(.scrolled) {
 .throne-caption {
   position: absolute;
   bottom: 20px;
-  left: 20px;
-  right: 20px;
-  background-color: rgba(12, 10, 9, 0.85);
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(212, 175, 55, 0.25);
+  left: 40px;
+  right: 40px;
+ 
+  
+ 
   padding: 12px;
   border-radius: 8px;
   text-align: center;
@@ -3921,7 +3932,7 @@ body {
 @media (max-width: 768px) {
   .triptych-container {
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
   }
   .triptych-center {
     width: 85vw;
@@ -4050,7 +4061,6 @@ h2 {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--color-gold);
-  align-items:;
 }
 
 .container-poses {
@@ -4062,12 +4072,7 @@ h2 {
 
 .card {
   transform-style: preserve-3d;
-  background-color: black;
+  background-image:url(/assets/Background.jpg);
 }
 
-.item-card {
-  background-color: rgb(196, 155, 103);
-  width: 400px;
-  height: 400px;
-  transition: transform 0.2s;
-}
+
