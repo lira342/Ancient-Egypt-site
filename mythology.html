@@ -124,25 +124,15 @@
             margin: 2rem auto;
         }
 
-        .scroll-indicator {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: bounce 2s infinite;
-        }
+       
 
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-            40% { transform: translateX(-50%) translateY(-20px); }
-            60% { transform: translateX(-50%) translateY(-10px); }
-        }
+       
 
         /* Section Styles */
         section {
             padding: 6rem 2rem;
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 100px auto;
             position: relative;
         }
 
@@ -208,17 +198,31 @@
             font-weight: 700;
         }
 
+        .pantheon {
+    width: 1000px;
+    
+background-position: center;
+    background-repeat: no-repeat;
+    padding: 90px 60px;
+    box-sizing: border-box;
+}
+
         /* God Cards */
-        .pantheon-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
+       .pantheon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 7000px;
+    margin: 4rem auto 0;
+
+    
+}
+
+
 
         .god-card {
             background: black;
-            border: 2px solid var(--dark-gold);
+            border: 1px solid var(--dark-gold);
             border-radius: 15px;
             padding: 2.5rem;
             transition: all 0.4s ease;
@@ -233,7 +237,6 @@
             left: 0;
             width: 100%;
             height: 4px;
-            background: linear-gradient(90deg, var(--gold), var(--dark-gold), var(--gold));
         }
 
         .god-card:hover {
@@ -269,7 +272,7 @@
             border-top: 1px solid rgba(201, 168, 76, 0.3);
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: 1.5rem;
         }
 
         .attribute-tag {
@@ -411,8 +414,10 @@
             transform: translateX(-50%);
             width: 2px;
             height: 100%;
-            background: linear-gradient(180deg, var(--gold), var(--dark-gold), var(--gold));
+            background: linear-gradient(180deg, var(--gold), var(--gold));
         }
+
+       
 
         .timeline-item {
             display: flex;
@@ -573,16 +578,12 @@
             <h1>EGYPTIAN MYTHOLOGY</h1>
             <div class="divider"></div>
             <p class="subtitle">"From the Dark Waters of Nun to the Eternal Sky of Nut"</p>
-            <p style="margin-top: 2rem; color: var(--sand); max-width: 600px; font-size: 1.1rem;">
+            <p style="margin-top: 2rem; color: var(--sand); max-width: 600px; font-size: 1.1rem; text-align: center;">
                 Explore the ancient beliefs that shaped one of history's greatest civilizations — 
                 a world where gods walked among mortals and magic flowed through the Nile.
             </p>
         </div>
-        <div class="scroll-indicator">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2">
-                <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
-            </svg>
-        </div>
+       
     </header>
 
     <section id="creation">
@@ -654,12 +655,7 @@
                     <br><br>
                     <em>Depicted as a bearded man wearing a headdress with two tall plumes. In the New Kingdom, represented as a ram-headed man.</em>
                 </div>
-                <div class="god-attributes">
-                    <span class="attribute-tag">Creator</span>
-                    <span class="attribute-tag">King of Gods</span>
-                    <span class="attribute-tag">Amun-Ra</span>
-                    <span class="attribute-tag">Theban</span>
-                </div>
+               
             </div>
 
             <div class="god-card fade-in">
@@ -673,14 +669,9 @@
                     seen in funerary inscriptions meant to guide the soul in the afterlife.
                     <br><br>
                     <em>Depicted as a man in royal dress, wearing the regal curved beard of the gods and carrying a staff 
-                    entwined with two serpents — a symbol later adopted by the Greeks for Asclepius and now the symbol of the medical profession.</em>
+                    entwined with two serpents - a symbol later adopted by the Greeks for Asclepius and now the symbol of the medical profession.</em>
                 </div>
-                <div class="god-attributes">
-                    <span class="attribute-tag">Magic</span>
-                    <span class="attribute-tag">Medicine</span>
-                    <span class="attribute-tag">Primordial</span>
-                    <span class="attribute-tag">Healing</span>
-                </div>
+                
             </div>
 
             <div class="god-card fade-in">
@@ -691,16 +682,11 @@
                     killed by his brother Set, then resurrected by his wife Isis, known as the "Mother of the Gods."
                     <br><br>
                     He fathered Horus and went into the underworld to serve as Judge of the Dead. According to the Book of the Dead, 
-                    he weighs the hearts of the dead against the white feather of Ma'at — the Feather of Truth.
+                    he weighs the hearts of the dead against the white feather of Ma'at - the Feather of Truth.
                     <br><br>
                     <em>Depicted as a mummy with green or black skin, symbolizing the fertility of the Nile region.</em>
                 </div>
-                <div class="god-attributes">
-                    <span class="attribute-tag">Afterlife</span>
-                    <span class="attribute-tag">Resurrection</span>
-                    <span class="attribute-tag">Judge</span>
-                    <span class="attribute-tag">Fertility</span>
-                </div>
+               
             </div>
 
             <div class="god-card fade-in">
@@ -716,12 +702,7 @@
                     <br><br>
                     <em>Most kings of Egypt linked themselves to Horus in life and Osiris in death, depicting themselves as the living incarnation of Horus.</em>
                 </div>
-                <div class="god-attributes">
-                    <span class="attribute-tag">Sky God</span>
-                    <span class="attribute-tag">Kingship</span>
-                    <span class="attribute-tag">Vengeance</span>
-                    <span class="attribute-tag">Eye of Horus</span>
-                </div>
+               
             </div>
         </div>
     </section>
@@ -874,13 +855,7 @@
         });
 
         // Parallax effect for hero
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            if (hero) {
-                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-            }
-        });
+       
     </script>
 </body>
 </html>
