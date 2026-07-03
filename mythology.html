@@ -24,13 +24,22 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Noto Serif', serif;
-            background-image: url(/assets/Background.jpg);
-            color: var(--text-dark);
-            line-height: 1.8;
-            overflow-x: hidden;
-        }
+       body {
+    font-family: 'Noto Serif', serif;
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(0, 0, 0, 0.85) 100%
+      ),
+      url(/assets/Artboard\ 2.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #c9a84c;
+    line-height: 1.8;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
 
         /* Navigation */
         nav {
@@ -397,7 +406,7 @@ background-position: center;
         }
 
         .detail-item p {
-            color: var(--papyrus);
+            color: #d4c4a0;
             line-height: 1.7;
         }
 
@@ -555,7 +564,7 @@ background-position: center;
             text-align: center;
             font-size: 1.5rem;
             letter-spacing: 10px;
-            color: var(--gold);
+            color: var(#d4c4a0);
             opacity: 0.5;
             margin: 2rem 0;
         }
