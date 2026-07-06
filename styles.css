@@ -19,7 +19,7 @@
   --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Global Reset */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -127,10 +127,16 @@ body {
 }
 
 .btn-primary {
-  background-color: var(--color-gold);
-  color: var(--color-black);
-  border-color: var(--color-gold);
-  box-shadow: 0 10px 15px -3px rgba(212, 175, 55, 0.15);
+  background: linear-gradient(135deg, var(--dark-gold) 0%, var(--gold) 100%);
+  color: var(--color-gold);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  text-align: center;
+  min-width: 150px;
+  box-shadow: 0 5px 15px rgba(201, 168, 76, 0.3);
+  position: relative;
 }
 
 .btn-primary:hover {
@@ -718,10 +724,7 @@ header:not(.scrolled) {
   inset: 0;
   background-color: rgba(61, 35, 20, 0.2);
   transition: var(--transition-smooth);
-
-  
 }
-
 
 /* Group Interactions */
 .triptych-arch-wrapper:hover .arch-frame {
@@ -984,9 +987,7 @@ header:not(.scrolled) {
   bottom: 20px;
   left: 40px;
   right: 40px;
- 
-  
- 
+
   padding: 12px;
   border-radius: 8px;
   text-align: center;
@@ -3965,8 +3966,8 @@ body {
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
+  gap: 10px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -4074,7 +4075,5 @@ h2 {
 
 .card {
   transform-style: preserve-3d;
-  background-image:url(/assets/Background.jpg);
+  background-image: url(/assets/Background.jpg);
 }
-
-
