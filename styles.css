@@ -718,6 +718,7 @@ header:not(.scrolled) {
   inset: 0;
   background-color: rgba(61, 35, 20, 0.2);
   transition: var(--transition-smooth);
+
   
 }
 
@@ -749,6 +750,7 @@ header:not(.scrolled) {
   margin-top: 30px;
   text-align: center;
   transition: var(--transition-smooth);
+  gap: 4px;
 }
 
 .center-label {
@@ -823,7 +825,7 @@ header:not(.scrolled) {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 4px;
+  width: 10px;
   pointer-events: none;
 }
 
@@ -1226,7 +1228,7 @@ header:not(.scrolled) {
   background-color: rgba(12, 10, 9, 0.8);
   backdrop-filter: blur(4px);
   border: 1px solid rgba(212, 175, 55, 0.2);
-  padding: 6px 12px;
+  padding: 10px 11px;
   border-radius: 4px;
   font-size: 10px;
   color: rgba(212, 175, 55, 0.85);
