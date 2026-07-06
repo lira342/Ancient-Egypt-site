@@ -3912,7 +3912,7 @@ body {
 }
 
 .triptych-center {
-  width: 45vw;
+  width: 25vw;
   height: 100vh;
   flex-shrink: 0;
 }
@@ -3938,13 +3938,13 @@ body {
     gap: 8px;
   }
   .triptych-center {
-    width: 85vw;
-    height: 50vh;
+    width: 70vw;
+    height: 40vh;
   }
   .triptych-left,
   .triptych-right {
-    width: 85vw;
-    height: 70vh;
+    width: 70vw;
+    height: 65vh;
     opacity: 1;
     filter: none;
   }
