@@ -75,7 +75,7 @@ body {
 
 /* Text Selection */
 ::selection {
-  background: var(--color-gold);
+  background: var(--color-brown);
   color: #f2e8d5;
 }
 
@@ -92,7 +92,7 @@ body {
 }
 
 .text-gold {
-  color: var(--color-gold) !important;
+  color: var(--color-brown) !important;
 }
 
 .text-brown {
@@ -128,7 +128,7 @@ body {
 
 .btn-primary {
   background: linear-gradient(135deg, var(--dark-gold) 0%, var(--gold) 100%);
-  color: var(--color-gold);
+  color: var(--color-brown);
   padding: 1rem 2rem;
   border-radius: 10px;
   font-family: "Cinzel", serif;
@@ -757,7 +757,7 @@ header:not(.scrolled) {
 }
 
 .center-label {
-  color: var(--color-gold);
+  color: var(--color-brown);
   font-weight: 700;
 }
 
@@ -767,9 +767,7 @@ header:not(.scrolled) {
 
 /* Scroll Indicator */
 .scroll-indicator {
-  display: flex;
-  justify-content: center;
-  padding-top: 24px;
+  display: none !important;
 }
 
 .scroll-btn {
@@ -1096,7 +1094,7 @@ header:not(.scrolled) {
   font-style: italic;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(212, 175, 55, 0.7);
+  color: brown;
   margin-top: 4px;
 }
 
@@ -1196,6 +1194,113 @@ header:not(.scrolled) {
 .eye-icon {
   width: 16px;
   height: 16px;
+}
+
+/* Make primary site buttons more visible and fully rounded (exclude navigation)
+   - Applies to elements using the .btn system and native button inputs
+   - Navigation elements inside the header are explicitly reset below */
+.btn,
+button,
+input[type="button"],
+input[type="submit"],
+.btn-primary,
+.btn-outline,
+.btn-brown,
+.btn-outline-brown,
+.btn-outline-gold,
+.btn-icon {
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(212, 175, 55, 0.9);
+  transition: var(--transition-smooth);
+}
+
+/* Keep header/navigation controls visually as originally intended */
+header .btn,
+header .cart-trigger,
+header .mobile-toggle,
+header .desktop-nav a,
+header .mobile-nav-link {
+  border-radius: 4px;
+  box-shadow: none;
+  border: 1px solid transparent;
+}
+
+/* Darken button backgrounds site-wide, but restore originals for the first section (hero) and the header/nav */
+.btn,
+button,
+input[type="button"],
+input[type="submit"],
+.btn-primary,
+.btn-brown,
+.btn-outline,
+.btn-outline-brown,
+.btn-outline-gold,
+.btn-icon {
+  background-color: rgba(12, 10, 9, 0.85) !important;
+  color: var(--color-beige) !important;
+  border-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Keep navigation/header controls visually unchanged */
+header .btn,
+header .cart-trigger,
+header .mobile-toggle,
+header .desktop-nav a {
+  background-color: transparent !important;
+  color: var(--color-gold) !important;
+  border-color: transparent !important;
+}
+
+/* Restore original button appearances inside the first section (hero) */
+.hero-section .hero-buttons .btn,
+.hero-section .hero-buttons .btn-primary,
+.hero-section .hero-buttons .btn-brown,
+.hero-section .hero-buttons .btn-outline,
+.hero-section .hero-buttons .btn-outline-gold,
+.hero-section .hero-buttons .btn-outline-brown {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 180px;
+  min-height: 54px;
+  padding: 1rem 1.5rem;
+  white-space: nowrap;
+}
+
+.hero-section .btn-primary {
+  background: linear-gradient(135deg, #f6e7bf 0%, #e6c56d 100%);
+  color: #4b2f1d;
+  border-radius: 999px;
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(201, 168, 76, 0.2);
+  border-color: rgba(255, 240, 205, 0.8);
+}
+
+.hero-section .btn-brown {
+  background-color: #b28b4c !important;
+  color: #fff8e8 !important;
+  border-color: #d8b36f !important;
+  border-radius: 999px;
+}
+
+.hero-section .btn-outline,
+.hero-section .btn-outline-gold,
+.hero-section .btn-outline-brown {
+  background-color: rgba(255, 248, 232, 0.16) !important;
+  color: #f1d08a !important;
+  border-color: rgba(241, 208, 138, 0.7) !important;
+  box-shadow: 0 5px 15px rgba(201, 168, 76, 0.12);
+  border-radius: 999px;
+}
+
+.hero-section {
+  background-image:
+    linear-gradient(rgba(8, 6, 4, 0.72), rgba(8, 6, 4, 0.72)),
+    url(/assets/Artboard\ 1.png);
+  background-blend-mode: multiply;
 }
 
 .hotspot-pulse {
@@ -3313,7 +3418,7 @@ footer {
   font-family: var(--font-serif-egypt);
   font-size: 18px;
   line-height: 1.3;
-  color: var(--color-gold);
+  color: var(--color-brown);
   padding-right: 20px;
 }
 
@@ -4063,7 +4168,7 @@ h2 {
   font-weight: 200;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--color-brown);
 }
 
 .container-poses {
