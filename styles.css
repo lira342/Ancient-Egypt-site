@@ -595,7 +595,8 @@ header:not(.scrolled) {
 .collage-image {
   width: 100%;
   height: 100%;
-  justify-content: cover;
+  object-fit: cover;
+  object-position: center;
   transition: transform 1.2s ease-out;
 }
 
