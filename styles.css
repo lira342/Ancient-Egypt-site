@@ -511,8 +511,8 @@ header:not(.scrolled) {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 150px;
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+  gap: 72px;
   align-items: center;
   padding-top: 32px;
 }
@@ -579,17 +579,17 @@ header:not(.scrolled) {
 .hero-media {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .collage-frame {
   position: relative;
   width: 100%;
-  max-width: 880px;
-  aspect-ratio: 16 / 11;
-  border-radius: 12px;
-  border: 1px solid rgba(212, 175, 55, 0.2);
+  max-width: 480px;
+  aspect-ratio: 4 / 5;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+  box-shadow: none;
 }
 
 .collage-image {
@@ -597,52 +597,12 @@ header:not(.scrolled) {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  display: block;
   transition: transform 1.2s ease-out;
 }
 
 .collage-frame:hover .collage-image {
-  transform: scale(1.05);
-}
-
-.collage-overlay {
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(to top, var(--color-black), transparent);
-  opacity: 0.55;
-}
-
-/* Frame Corner Accents */
-.corner-accent {
-  position: absolute;
-  width: px;
-  height: 24px;
-  border: 2px solid #a87449;
-  pointer-events: none;
-}
-
-.top-left {
-  top: 16px;
-  left: 16px;
-  border-right: none;
-  border-bottom: none;
-}
-.top-right {
-  top: 16px;
-  right: 16px;
-  border-left: none;
-  border-bottom: none;
-}
-.bottom-left {
-  bottom: 16px;
-  left: 16px;
-  border-right: none;
-  border-top: none;
-}
-.bottom-right {
-  bottom: 16px;
-  right: 16px;
-  border-left: none;
-  border-top: none;
+  transform: scale(1.03);
 }
 
 /* Triptych Arches Below Hero */
